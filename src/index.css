@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@keyframes scanner-beam {
+  0% {
+    top: 5%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 5%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scanner-beam {
+  animation: scanner-beam 2.2s ease-in-out infinite;
+}
+
+/* Hide scrollbar for category pills on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding for mobile notch and navigation bar */
+.safe-area-pb {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0.75rem));
+}
+
+/* Print Styles for Direct Thermal / PDF Printing */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide header, navigation, form editor, and all UI elements */
+  header,
+  nav,
+  button,
+  .no-print,
+  #receipt-form-column {
+    display: none !important;
+  }
+
+  /* Expand receipt to printable area */
+  #receipt-print-area {
+    margin: 0 auto !important;
+    padding: 16px !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 420px !important;
+  }
+}

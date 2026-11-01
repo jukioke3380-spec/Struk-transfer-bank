@@ -1,0 +1,8 @@
+{
+  "name": "LensaTeks OCR PWA",
+  "description": "Aplikasi OCR PWA mobile untuk ekstraksi teks akurat dan cepat dengan dukungan mode offline penuh via Service Worker.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
